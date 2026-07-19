@@ -1,3 +1,39 @@
+# AI Operating System
+
+A single-file, dependency-free dashboard for tracking, comparing, and deciding between AI tools — built to pair with the master research prompt in `MASTER_PROMPT.md`.
+
+**[Live demo →]** *(enable GitHub Pages, see below, then paste your Pages URL here)*
+
+## What's in this repo
+
+| File | Purpose |
+|---|---|
+| `index.html` | The whole app — HTML, CSS, and JS in one file. No build step, no npm install. |
+| `MASTER_PROMPT.md` | A reusable prompt for Claude (or any LLM) that walks through 10 research phases — landscape mapping, tool database, competitive comparison, workflows, business opportunities, future trends, and personal recommendations — to keep this dashboard's data current. |
+
+## Run it locally
+
+Just open `index.html` in a browser. That's it — no server, no dependencies.
+
+## Deploy to GitHub Pages
+
+1. Push this repo to GitHub.
+2. Go to **Settings → Pages**.
+3. Under **Source**, select the `main` branch and `/ (root)` folder.
+4. Save — your dashboard will be live at `https://<username>.github.io/<repo-name>/` within a minute or two.
+
+## Keeping it current
+
+1. Open a Claude conversation (ideally a Claude Project so it persists) and paste in `MASTER_PROMPT.md`.
+2. Run a phase — e.g. "Phase 3, deep dive on AI video tools."
+3. Take the output and add/update entries in the `TOOLS`, `STACKS`, `OPPORTUNITIES`, `TRENDS`, or `RECOMMENDATIONS` arrays near the top of the `<script>` block in `index.html`.
+4. Commit and push — GitHub Pages updates automatically.
+
+## Customizing the design
+
+Brand colors and fonts live at the top of the `<style>` block in `index.html` as CSS custom properties (`--dark`, `--orange`, `--blue`, `--green`, etc.) and Google Fonts imports (Poppins for display type, Lora for body text). Change them there to re-theme the whole app.
+
+
 # AI Operating System — Master Prompt
 
 Paste this into a Claude Project's custom instructions (or the first message of a new conversation) to stand up and maintain your personal AI Operating System — a permanent, evolving knowledge base for discovering, comparing, and building with AI tools.
